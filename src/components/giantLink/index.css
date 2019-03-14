@@ -1,0 +1,12 @@
+.root {
+  font-size: 120px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top: 100vh solid #404b69;
+  border-bottom: 100vh solid #f73859;
+  width: 800px;
+  text-align: center;
+  padding: 100px 0;
+}

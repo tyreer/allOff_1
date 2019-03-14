@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Test Deployment Gatsby`,
-    description: `Trial deployment via Netlify`,
+    title: `one-liner-one`,
+    description: `One-liner: one`,
     author: `@tyreer`
   },
   plugins: [
