@@ -1,5 +1,4 @@
 .root {
-  font-size: 120px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -8,5 +7,11 @@
   border-bottom: 100vh solid #f73859;
   width: 800px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 120px;
+}
+
+.letter {
   padding: 100px 0;
 }

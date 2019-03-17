@@ -2,20 +2,23 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import TinyLink from "./tinyLink";
-import GiantLink from "./giantLink";
+import GiantLink from "./giantLink/giantLink";
 
 const tinyLinks = [
   {
+    id: 1,
     text: `rubbish`,
-    to: `rubbish`
+    to: `/rubbish`
   },
   {
+    id: 2,
     text: `trash`,
-    to: `trash`
+    to: `/trash`
   },
   {
+    id: 3,
     text: `Ferrero Rocher`,
-    to: `Ferrero Rocher`
+    to: `/ferrero-rocher`
   }
 ];
 
@@ -63,6 +66,7 @@ class Header extends Component {
         >
           {tinyLinks.map(tiny => (
             <TinyLink
+              key={tiny.id}
               text={tiny.text}
               to={tiny.to}
               setActive={this.setActive}
