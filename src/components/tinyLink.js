@@ -1,29 +1,36 @@
-import React, { Component } from "react";
-import { Link } from "gatsby";
+import React from "react";
 import "./tinyLinks.css";
 
-class TinyLink extends Component {
-  handleMouseOver = () => {
-    this.props.setActive(this.props.text);
+const TinyLink = ({
+  setActive,
+  text,
+  setIsActive,
+  setCurrentIndex,
+  currentIndex,
+  setOffset,
+  index
+}) => {
+  const handleMouseOver = () => {
+    setIsActive(true);
+    setActive(currentIndex);
+    setOffset(index);
   };
 
-  handleMouseOut = () => {
-    this.props.setActive(null);
+  const handleMouseOut = () => {
+    setIsActive(false);
+    const nextIndex = currentIndex < 15 ? currentIndex + 1 : 0;
+    setCurrentIndex(nextIndex);
   };
 
-  render() {
-    const { text, to } = this.props;
-    return (
-      <Link
-        to={to}
-        className={"tinyLink"}
-        onMouseOver={this.handleMouseOver}
-        onMouseOut={this.handleMouseOut}
-      >
-        {text}
-      </Link>
-    );
-  }
-}
+  return (
+    <p
+      className={"tinyLink"}
+      onMouseOver={handleMouseOver}
+      onMouseOut={handleMouseOut}
+    >
+      {text}
+    </p>
+  );
+};
 
 export default TinyLink;
