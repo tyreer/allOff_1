@@ -6,6 +6,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   background: #dbedf3;
+  cursor: url("../images/mag-glass-small.png"), pointer;
 }
 body {
   margin: 0;

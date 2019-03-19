@@ -4,7 +4,7 @@ import "./tinyLinks.css";
 
 class TinyLink extends Component {
   handleMouseOver = () => {
-    this.props.setActive(this.props.text);
+    this.props.setActive(this.props.link);
   };
 
   handleMouseOut = () => {
