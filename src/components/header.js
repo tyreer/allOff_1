@@ -7,18 +7,18 @@ import GiantLink from "./giantLink/giantLink";
 const tinyLinks = [
   {
     id: 1,
-    text: `rubbish`,
-    to: `/rubbish`
+    text: `home`,
+    to: `/home`
   },
   {
     id: 2,
-    text: `trash`,
-    to: `/trash`
+    text: `about`,
+    to: `/about`
   },
   {
     id: 3,
-    text: `Ferrero Rocher`,
-    to: `/ferrero-rocher`
+    text: `contact`,
+    to: `/contact`
   }
 ];
 
@@ -69,6 +69,7 @@ class Header extends Component {
               key={tiny.id}
               text={tiny.text}
               to={tiny.to}
+              link={tiny}
               setActive={this.setActive}
             />
           ))}

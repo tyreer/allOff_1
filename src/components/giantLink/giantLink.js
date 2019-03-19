@@ -1,15 +1,25 @@
 import React from "react";
 import "./giantLink.css";
-import { useTrail, animated, config } from "react-spring";
+import { useTrail, animated, config, useSpring } from "react-spring";
 
-const GiantLink = ({ activeLink }) => {
-  const letters = activeLink.split("");
+const rotations = [
+  { id: 0, rotate: "-45deg" },
+  { id: 1, rotate: "30deg" },
+  { id: 2, rotate: "-20deg" }
+];
 
-  // config: { mass: 1, tension: 150, friction: 13 },
-  // config: { mass: 1, tension: 170, friction: 13 },
+const GiantLink = ({ activeLink = 0 }) => {
+  const letters = activeLink.text.split("");
 
-  // from: { opacity: 0, transform: ["scale(0), rotate(-10deg)"] },
-  // to: { opacity: 1, transform: ["scale(1), rotate(0)"] }
+  const [offset, set] = useSpring(() => ({
+    from: { transform: "translate(-50%, -50%) rotate(-10deg)" },
+    to: {
+      transform: `translate(-40%, -65%) rotate(${
+        rotations[activeLink.id - 1].rotate
+      })`
+    },
+    config: config.molasses
+  }));
 
   const trail = useTrail(letters.length, {
     config: { mass: 1, tension: 200, friction: 15 },
@@ -18,18 +28,24 @@ const GiantLink = ({ activeLink }) => {
   });
 
   return (
-    <div className={"root"}>
-      {trail.map(({ ...rest }, index) => (
-        <animated.div
-          key={index}
-          style={{
-            ...rest
-          }}
-        >
-          <p className={"letter"}>{letters[index]}</p>
-        </animated.div>
-      ))}
-    </div>
+    <>
+      <animated.div
+        className={`bg bg-${activeLink.id}`}
+        style={{ transform: offset.transform }}
+      />
+      <div className={"root"}>
+        {trail.map(({ ...rest }, index) => (
+          <animated.div
+            key={index}
+            style={{
+              ...rest
+            }}
+          >
+            <p className={"letter"}>{letters[index]}</p>
+          </animated.div>
+        ))}
+      </div>
+    </>
   );
 };
 

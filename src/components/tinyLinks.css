@@ -8,4 +8,5 @@
 
 .tinyLink:hover {
   color: white;
+  cursor: help;
 }
