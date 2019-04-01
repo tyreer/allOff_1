@@ -24,22 +24,45 @@ header {
 }
 
 .image-1 {
-  background: url("../images/perpendicular-lights-1200.png");
+  background: url("../images/perpendicular-lights-1200-color.png");
   background-position-y: -320px;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .image-2 {
-  background: url("../images/lamp.png");
-  background-position-y: -520px;
+  background: url("../images/perpendicular-lights-1200.png");
+  background-position-y: -320px;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .image-3 {
-  background: url("../images/backpack.png");
-  background-position-y: -40px;
+  background: url("../images/lamp-color.png");
+  background-position-y: -520px;
+  background-position-x: 150px;
   background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.image-4 {
+  background: url("../images/lamp.png");
+  background-position-y: -520px;
+  background-position-x: 150px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.image-5 {
+  background: url("../images/sweatshirt_1000_color.png");
+  transform: translate(-50%, -50%) rotate(6deg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.image-6 {
+  background: url("../images/sweatshirt_1000.png");
+  transform: translate(-50%, -50%) rotate(6deg);
+  background-size: contain;
   background-repeat: no-repeat;
 }

@@ -10,6 +10,7 @@ const TinyLink = ({ setActive, incrementCounter, link, text, to }) => {
 
   const handleMouseOut = () => {
     setActive(null);
+    incrementCounter();
   };
 
   return (

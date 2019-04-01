@@ -34,7 +34,7 @@ class Header extends Component {
 
   incrementCounter = () => {
     this.setState({
-      counter: this.state.counter === 3 ? 1 : this.state.counter + 1
+      counter: this.state.counter === 6 ? 1 : this.state.counter + 1
     });
   };
 
