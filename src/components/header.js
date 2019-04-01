@@ -24,7 +24,7 @@ const tinyLinks = [
 ];
 
 class Header extends Component {
-  state = { activeLink: null, counter: 1 };
+  state = { activeLink: null, counter: 0 };
 
   setActive = activeLink => {
     this.setState({
@@ -32,7 +32,7 @@ class Header extends Component {
     });
   };
 
-  setCounter = () => {
+  incrementCounter = () => {
     this.setState({
       counter: this.state.counter === 3 ? 1 : this.state.counter + 1
     });
@@ -68,20 +68,12 @@ class Header extends Component {
               to={tiny.to}
               link={tiny}
               setActive={this.setActive}
-              setCounter={this.setCounter}
+              incrementCounter={this.incrementCounter}
             />
           ))}
         </div>
         {activeLink && <GiantLink activeLink={activeLink} />}
         <div className={`image image-${counter}`} />
-
-        {/* font-size: 100px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 25%;
-  */}
       </header>
     );
   }
