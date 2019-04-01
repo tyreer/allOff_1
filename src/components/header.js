@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import TinyLink from "./tinyLink";
 import GiantLink from "./giantLink/giantLink";
+import "./header.css";
 
 const tinyLinks = [
   {
@@ -23,22 +24,26 @@ const tinyLinks = [
 ];
 
 class Header extends Component {
-  state = { activeLink: null };
+  state = { activeLink: null, counter: 1 };
 
   setActive = activeLink => {
-    this.setState({ activeLink });
+    this.setState({
+      activeLink
+    });
+  };
+
+  setCounter = () => {
+    this.setState({
+      counter: this.state.counter === 3 ? 1 : this.state.counter + 1
+    });
   };
 
   render() {
     const { siteTitle } = this.props;
-    const { activeLink } = this.state;
+    const { activeLink, counter } = this.state;
 
     return (
-      <header
-        style={{
-          marginBottom: `1.45rem`
-        }}
-      >
+      <header>
         <div
           style={{
             padding: `1rem`
@@ -55,15 +60,7 @@ class Header extends Component {
             </Link>
           </h1>
         </div>
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 666,
-            display: `grid`,
-            gridTemplateColumns: `1fr 1fr 1fr`,
-            textAlign: `center`
-          }}
-        >
+        <div className="linkContainer">
           {tinyLinks.map(tiny => (
             <TinyLink
               key={tiny.id}
@@ -71,10 +68,12 @@ class Header extends Component {
               to={tiny.to}
               link={tiny}
               setActive={this.setActive}
+              setCounter={this.setCounter}
             />
           ))}
         </div>
         {activeLink && <GiantLink activeLink={activeLink} />}
+        <div className={`image image-${counter}`} />
 
         {/* font-size: 100px;
   position: absolute;

@@ -9,6 +9,7 @@ class TinyLink extends Component {
 
   handleMouseOut = () => {
     this.props.setActive(null);
+    this.props.setCounter();
   };
 
   render() {

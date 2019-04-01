@@ -27,13 +27,22 @@ const GiantLink = ({ activeLink = 0 }) => {
     to: { transform: "scale(1) rotate(0)" }
   });
 
+  const wordArr = [];
+  for (let x = 0; x < 15; x++) {
+    wordArr.push(activeLink.text);
+  }
+
   return (
     <>
       <animated.div
         className={`bg bg-${activeLink.id}`}
         style={{ transform: offset.transform }}
-      />
-      <div className={"root"}>
+      >
+        {wordArr.map((w, index) => (
+          <p key={index}>{w}</p>
+        ))}
+      </animated.div>
+      {/* <div className={"root"}>
         {trail.map(({ ...rest }, index) => (
           <animated.div
             key={index}
@@ -44,7 +53,7 @@ const GiantLink = ({ activeLink = 0 }) => {
             <p className={"letter"}>{letters[index]}</p>
           </animated.div>
         ))}
-      </div>
+      </div> */}
     </>
   );
 };
