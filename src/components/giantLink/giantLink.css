@@ -18,8 +18,8 @@
 
 .bg {
   position: absolute;
-  width: 200vw;
-  height: 200vh;
+  width: 140vw;
+  height: 140vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -33,15 +33,15 @@
 
 .bg-1 {
   /* background: url("../../images/granite-wood.png"); */
-  transform: translate(-50%, -50%) rotate(-5deg);
+  /* transform: translate(-50%, -50%) rotate(-5deg); */
 }
 
 .bg-2 {
   /* background: url("../../images/backpack.png"); */
-  transform: translate(-50%, -50%) rotate(10deg);
+  /* transform: translate(-50%, -50%) rotate(10deg); */
 }
 
 .bg-3 {
   /* background: url("../../images/white-light-no-logo.png"); */
-  transform: translate(-50%, -50%) rotate(40deg);
+  /* transform: translate(-50%, -50%) rotate(40deg); */
 }

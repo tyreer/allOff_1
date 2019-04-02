@@ -15,14 +15,58 @@ header {
 }
 
 .image {
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw;
+  height: 100vh; */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0;
 }
 
+.image-1:nth-of-type(1) {
+  opacity: 1;
+  filter: brightness(300) blur(1px) url("../images/red.svg#blue");
+}
+
+.image-2:nth-of-type(1) {
+  opacity: 1;
+}
+
+.image-3:nth-of-type(2) {
+  opacity: 1;
+  filter: brightness(300) blur(1px) url("../images/red.svg#yellow");
+  left: 65%;
+}
+
+.image-4:nth-of-type(2) {
+  opacity: 1;
+  left: 65%;
+}
+
+.image-5:nth-of-type(3) {
+  opacity: 1;
+  filter: brightness(300) blur(1px) url("../images/red.svg#pink");
+  transform: translate(-50%, -50%) rotate(6deg);
+}
+
+.image-6:nth-of-type(3) {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(6deg);
+}
+
+/* .image-1:first-of-type {
+  opacity: 1;
+}
+
+.image-2:last-of-type {
+  opacity: 1;
+} */
+
+/* .image-3 {
+  opacity: 1;
+} */
+/* 
 .image-1 {
   background: url("../images/perpendicular-lights-1200-color.png");
   background-position-y: -320px;
@@ -65,4 +109,4 @@ header {
   transform: translate(-50%, -50%) rotate(6deg);
   background-size: contain;
   background-repeat: no-repeat;
-}
+} */

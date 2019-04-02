@@ -4,6 +4,9 @@ import React, { Component } from "react";
 import TinyLink from "./tinyLink";
 import GiantLink from "./giantLink/giantLink";
 import "./header.css";
+import image_1 from "../images/perpendicular-lights-1200.png";
+import image_2 from "../images/lamp.png";
+import image_3 from "../images/sweatshirt_750.png";
 
 const tinyLinks = [
   {
@@ -73,7 +76,9 @@ class Header extends Component {
           ))}
         </div>
         {activeLink && <GiantLink activeLink={activeLink} />}
-        <div className={`image image-${counter}`} />
+        <img src={image_1} className={`image image-${counter}`} />
+        <img src={image_2} className={`image image-${counter}`} />
+        <img src={image_3} className={`image image-${counter}`} />
       </header>
     );
   }
