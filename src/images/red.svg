@@ -3,27 +3,27 @@
     color-interpolation-filters="sRGB"
     x="0" y="0" height="100%" width="100%">
   <feColorMatrix type="matrix"
-   values="0.1215 0 0 0 0 
-           1 0 0 0 0 
-           1 0 0 0 0 
+   values="0.251 0 0 0 0 
+           0.294 0 0 0 0 
+           0.412 0 0 0 0 
            0 0 0 1 0" />
 </filter>
-  <filter id="yellow" 
-    color-interpolation-filters="sRGB"
-    x="0" y="0" height="100%" width="100%">
-  <feColorMatrix type="matrix"
-   values="1 0 0 0 0 
-           0.949 0 0 0 0 
-           0  0 0 0 0 
-           0 0 0 1 0" />
-</filter>
-  <filter id="pink" 
+  <filter id="red" 
     color-interpolation-filters="sRGB"
     x="0" y="0" height="100%" width="100%">
   <feColorMatrix type="matrix"
    values="0.969 0 0 0 0 
-           0.22 0 0 0 0 
-           0.349 0 0 0 0 
+           0.219 0 0 0 0 
+           0.349  0 0 0 0 
            0 0 0 1 0" />
+</filter>
+  <filter id="brightBlue" 
+    color-interpolation-filters="sRGB"
+    x="0" y="0" height="100%" width="100%">
+  <feColorMatrix type="matrix"
+     values="0.1215 0 0 0 0 
+           1 0 0 0 0 
+           1 0 0 0 0 
+           0 0 0 1 0" /> -->
 </filter>
 </svg>
