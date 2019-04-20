@@ -7,11 +7,17 @@ html {
   -webkit-text-size-adjust: 100%;
   background: #dbedf3;
   cursor: url("../images/mag-glass-small.png"), pointer;
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
 }
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
 }
 article,
 aside,

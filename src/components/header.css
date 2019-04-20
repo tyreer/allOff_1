@@ -22,6 +22,8 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
+
+  overflow: hidden;
 }
 
 .image-1:nth-of-type(1) {
@@ -46,7 +48,7 @@ header {
 
 .image-5:nth-of-type(3) {
   opacity: 1;
-  filter: brightness(300) url("../images/red.svg#brightBlue");
+  filter: brightness(300);
   transform: translate(-50%, -50%) rotate(6deg);
 }
 

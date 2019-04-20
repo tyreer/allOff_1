@@ -12,23 +12,39 @@
   font-size: 120px;
 }
 
+.giantContainer {
+  position: absolute;
+  font-size: 350px;
+  display: flex;
+  bottom: 0;
+}
+
 .letter {
   padding: 100px 0;
 }
 
 .bg {
   position: absolute;
-  width: 140vw;
-  height: 140vh;
+  width: 200vw;
+  /* line-height: 0.9; */
+  /* height: 140vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #dbedf3;
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-size: 200px;
-  flex-wrap: wrap;
+  align-items: center; */
+  /* font-size: 75px; */
+  /* flex-wrap: wrap; */
+  /* top: -20px; */
+  /* line-height: 1.6; */
+  bottom: 40px;
+  font-size: 350px;
+}
+
+.bg p {
+  margin: 0;
 }
 
 .bg-1 {
