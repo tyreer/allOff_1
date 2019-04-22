@@ -1,23 +1,37 @@
-.root {
+/* Not used */
+
+/* .root {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-top: 100vh solid #404b69;
+  border-top: 100vh solid hsl(224, 24%, 33%);
   border-bottom: 100vh solid #f73859;
   width: 800px;
   text-align: center;
   display: flex;
   justify-content: center;
   font-size: 120px;
-}
+} */
 
 .giantContainer {
   position: absolute;
-  font-size: 350px;
+  font-size: 80px;
   display: flex;
-  bottom: 0;
+  bottom: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  border: 5px solid#f73859;
+  padding: 0 5px;
 }
+
+.letterContainer {
+  text-transform: uppercase;
+  line-height: 0.8;
+}
+
+/* Not used */
 
 .letter {
   padding: 100px 0;

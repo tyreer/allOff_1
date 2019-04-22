@@ -23,7 +23,7 @@ const GiantLink = ({ activeLink = 0 }) => {
     // config: { mass: 1, tension: 200, friction: 15 },
     config: config.stiff,
     from: { transform: "translateY(50vh)", opacity: "0" },
-    transform: "translateY(-5vh)",
+    transform: "translateY(0)",
     opacity: 1
   });
 
@@ -42,17 +42,14 @@ const GiantLink = ({ activeLink = 0 }) => {
         ))}
       </animated.div> */}
       <div className={"giantContainer"}>
-        {trail.map(({ ...rest }, index) => (
-          <animated.div
+        {trail.map((trailAnimation, index) => (
+          <animated.span
             key={index}
-            style={{
-              ...rest
-            }}
+            style={trailAnimation}
+            className="letterContainer"
           >
-            <span style={{ color: index % 2 === 0 ? "#404b69" : "#f73859" }}>
-              {letters[index]}
-            </span>
-          </animated.div>
+            {letters[index]}
+          </animated.span>
         ))}
       </div>
 

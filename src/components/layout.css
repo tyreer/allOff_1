@@ -1,8 +1,8 @@
 /* TODO: Use Typography component */
-@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy");
+@import url("https://fonts.googleapis.com/css?family=Rajdhani");
 
 html {
-  font-family: "Luckiest Guy", cursive;
+  font-family: "Rajdhani", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   background: #dbedf3;
@@ -198,7 +198,6 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -213,7 +212,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: "Luckiest Guy", cursive;
+  font-family: "Rajdhani", sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
