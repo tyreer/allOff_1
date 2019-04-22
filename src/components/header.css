@@ -12,6 +12,8 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .image {
