@@ -1,6 +1,6 @@
 import React from "react";
 import "./giantLink.css";
-import { useTrail, animated, config, useSpring } from "react-spring";
+import { useTrail, animated, config } from "react-spring";
 
 const getRandomInt = (min, max) =>
   Math.floor(Math.random() * (max - min) + min);
@@ -54,32 +54,8 @@ const GiantLink = ({ activeLink }) => {
       break;
   }
 
-  // let offset;
-
-  // switch (activeLink.id) {
-  //   case 1:
-  //     offset = 1;
-  //     break;
-  //   case 2:
-  //     offset = -1;
-  //     break;
-  //   case 3:
-  //     offset = 1;
-  //     break;
-  // }
-
-  // const offset = activeLink.id === 2 ? -1 : 1;
-
   return (
     <>
-      {/* <animated.div style={offset} className={`bg bg-${activeLink.id}`}>
-        {wordArr.map((w, index) => (
-          <span style={{ color: index % 2 === 0 ? "#404b69" : "#f73859" }}>
-            {w}
-          </span>
-        ))}
-      </animated.div> */}
-
       {trail.map((trailAnimation, index) => (
         <div
           style={{
@@ -100,19 +76,6 @@ const GiantLink = ({ activeLink }) => {
           </animated.div>
         </div>
       ))}
-
-      {/* <div className={"root"}>
-        {trail.map(({ ...rest }, index) => (
-          <animated.div
-            key={index}
-            style={{
-              ...rest
-            }}
-          >
-            <p className={"letter"}>{letters[index]}</p>
-          </animated.div>
-        ))}
-      </div> */}
     </>
   );
 };
