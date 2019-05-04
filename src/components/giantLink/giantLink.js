@@ -25,11 +25,9 @@ const GiantLink = ({ activeLink }) => {
   const trailLength = getRandomInt(1, 3);
 
   const trail = useTrail(trailLength, {
-    // config: { mass: 1, tension: 200, friction: 15 },
     config: config.stiff,
-    from: { transform: `${yValue} translateX(-50%)`, opacity: "0" },
-    transform: "translateY(0) translateX(-50%)",
-    opacity: 1
+    from: { transform: `${yValue} translateX(-50%)` },
+    transform: "translateY(0) translateX(-50%)"
   });
 
   let crazyStyles;
