@@ -22,7 +22,7 @@ const GiantLink = ({ activeLink }) => {
       break;
   }
 
-  const trailLength = getRandomInt(1, 4);
+  const trailLength = getRandomInt(1, 3);
 
   const trail = useTrail(trailLength, {
     // config: { mass: 1, tension: 200, friction: 15 },
