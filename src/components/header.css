@@ -28,32 +28,48 @@ header {
 .image-1:nth-of-type(1) {
   opacity: 1;
   filter: brightness(2000) drop-shadow(16px 16px 20px blue);
+  left: 40%;
+  top: 40%;
+  height: 100%;
+  transform: translate(-50%, -50%) rotate(-220deg);
 }
 
 .image-2:nth-of-type(1) {
   opacity: 1;
+  left: 40%;
+  top: 40%;
+  height: 100%;
+  transform: translate(-50%, -50%) rotate(-220deg);
 }
 
 .image-3:nth-of-type(2) {
   opacity: 1;
   filter: brightness(2000) drop-shadow(16px 16px 20px blue);
-  left: 65%;
+  transform: translate(-50%, -50%) rotate(6deg);
+  height: 90%;
 }
 
 .image-4:nth-of-type(2) {
   opacity: 1;
-  left: 65%;
+  transform: translate(-50%, -50%) rotate(6deg);
+  height: 90%;
 }
 
 .image-5:nth-of-type(3) {
   opacity: 1;
   filter: brightness(2000) drop-shadow(16px 16px 20px blue);
-  transform: translate(-50%, -50%) rotate(6deg);
+  left: 65%;
+  height: 100%;
+  top: 20%;
+  transform: translate(-50%, -50%) rotate(-40deg);
 }
 
 .image-6:nth-of-type(3) {
   opacity: 1;
-  transform: translate(-50%, -50%) rotate(6deg);
+  left: 65%;
+  height: 100%;
+  top: 20%;
+  transform: translate(-50%, -50%) rotate(-40deg);
 }
 
 .image-7:nth-of-type(4) {
@@ -71,7 +87,7 @@ header {
 
 .image-9:nth-of-type(5) {
   opacity: 1;
-  filter: brightness(2000) grayscale(200%) contrast(500%)
+  filter: brightness(2000) grayscale(200%) contrast(500%) saturate(400)
     drop-shadow(16px 16px 20px blue);
   transform: translate(-50%, -50%) rotate(190deg);
   left: 40%;

@@ -5,8 +5,8 @@ import TinyLink from "./tinyLink";
 import GiantLink from "./giantLink/giantLink";
 import "./header.css";
 import image_1 from "../images/perpendicular-lights-1200.png";
-import image_2 from "../images/lamp.png";
-import image_3 from "../images/sweatshirt_750.png";
+import image_2 from "../images/sweatshirt_750.png";
+import image_3 from "../images/lamp.png";
 import image_4 from "../images/chair.png";
 import image_5 from "../images/granite-wood.png";
 
