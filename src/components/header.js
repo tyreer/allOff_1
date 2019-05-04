@@ -7,6 +7,8 @@ import "./header.css";
 import image_1 from "../images/perpendicular-lights-1200.png";
 import image_2 from "../images/lamp.png";
 import image_3 from "../images/sweatshirt_750.png";
+import image_4 from "../images/chair.png";
+import image_5 from "../images/granite-wood.png";
 
 const tinyLinks = [
   {
@@ -37,7 +39,7 @@ class Header extends Component {
 
   incrementCounter = () => {
     this.setState({
-      counter: this.state.counter === 6 ? 1 : this.state.counter + 1
+      counter: this.state.counter === 10 ? 1 : this.state.counter + 1
     });
   };
 
@@ -79,6 +81,8 @@ class Header extends Component {
         <img src={image_1} className={`image image-${counter}`} />
         <img src={image_2} className={`image image-${counter}`} />
         <img src={image_3} className={`image image-${counter}`} />
+        <img src={image_4} className={`image image-${counter}`} />
+        <img src={image_5} className={`image image-${counter}`} />
       </header>
     );
   }

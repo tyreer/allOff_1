@@ -22,7 +22,6 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-
   overflow: hidden;
 }
 
@@ -55,4 +54,32 @@ header {
 .image-6:nth-of-type(3) {
   opacity: 1;
   transform: translate(-50%, -50%) rotate(6deg);
+}
+
+.image-7:nth-of-type(4) {
+  opacity: 1;
+  filter: brightness(300);
+  transform: translate(-50%, -50%) rotate(6deg);
+  height: 90%;
+}
+
+.image-8:nth-of-type(4) {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(6deg);
+  height: 90%;
+}
+
+.image-9:nth-of-type(5) {
+  opacity: 1;
+  filter: brightness(300);
+  transform: translate(-50%, -50%) rotate(190deg);
+  left: 40%;
+  top: 70%;
+}
+
+.image-10:nth-of-type(5) {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(190deg);
+  left: 40%;
+  top: 70%;
 }
