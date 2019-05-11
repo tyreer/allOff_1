@@ -1,6 +1,5 @@
 import React from "react";
 import "./giantLink.css";
-import { useTrail, animated, config } from "react-spring";
 
 const getRandomInt = (min, max) =>
   Math.floor(Math.random() * (max - min) + min);
@@ -11,7 +10,7 @@ const GiantLink = ({ activeLink }) => {
   let limit = getRandomInt(1, 3);
 
   while (count < limit) {
-    labels.push("x");
+    labels.push(count);
     count++;
   }
 
@@ -39,15 +38,16 @@ const GiantLink = ({ activeLink }) => {
 
   return (
     <>
-      {labels.map(() => (
+      {labels.map(key => (
         <div
+          key={key}
           style={{
             ...crazyStyles,
             transform: `rotate(${getRandomInt(-70, 70)}deg)`
           }}
-          className="outer"
+          className="labelOuterContainer"
         >
-          <div className="letterContainer">{activeLink.text}</div>
+          <div className="labelInnerContainer">{activeLink.text}</div>
         </div>
       ))}
     </>
