@@ -2,11 +2,9 @@
   font-size: 3px;
   border-bottom: 20px #283149 solid;
   border-top: 10px #283149 solid;
-  position: relative;
   z-index: 1;
 }
 
 .tinyLink:hover {
-  color: white;
   cursor: help;
 }
