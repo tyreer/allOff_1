@@ -1,18 +1,22 @@
 header {
   height: 40vh;
-  display: flex !important;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.linkContainer {
+.title {
+  padding: 1rem;
+  font-size: 0.75rem;
+}
+
+.tinyLinkContainer {
   margin: 0 auto;
   max-width: 666px;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
-  position: relative;
   z-index: 2;
 }
 
@@ -22,10 +26,9 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-  overflow: hidden;
 }
 
-.image-1:nth-of-type(1) {
+.image-1.imageSequence-1 {
   opacity: 1;
   filter: brightness(2000) drop-shadow(16px 16px 20px blue);
   left: 40%;
@@ -34,7 +37,7 @@ header {
   transform: translate(-50%, -50%) rotate(-220deg);
 }
 
-.image-2:nth-of-type(1) {
+.image-1.imageSequence-2 {
   opacity: 1;
   left: 40%;
   top: 40%;
@@ -42,20 +45,20 @@ header {
   transform: translate(-50%, -50%) rotate(-220deg);
 }
 
-.image-3:nth-of-type(2) {
+.image-2.imageSequence-3 {
   opacity: 1;
   filter: brightness(2000) drop-shadow(16px 16px 20px blue);
   transform: translate(-50%, -50%) rotate(6deg);
   height: 90%;
 }
 
-.image-4:nth-of-type(2) {
+.image-2.imageSequence-4 {
   opacity: 1;
   transform: translate(-50%, -50%) rotate(6deg);
   height: 90%;
 }
 
-.image-5:nth-of-type(3) {
+.image-3.imageSequence-5 {
   opacity: 1;
   filter: brightness(2000) drop-shadow(16px 16px 20px blue);
   left: 65%;
@@ -64,7 +67,7 @@ header {
   transform: translate(-50%, -50%) rotate(-40deg);
 }
 
-.image-6:nth-of-type(3) {
+.image-3.imageSequence-6 {
   opacity: 1;
   left: 65%;
   height: 100%;
@@ -72,20 +75,20 @@ header {
   transform: translate(-50%, -50%) rotate(-40deg);
 }
 
-.image-7:nth-of-type(4) {
+.image-4.imageSequence-7 {
   opacity: 1;
   filter: brightness(2000) drop-shadow(16px 16px 20px blue);
   transform: translate(-50%, -50%) rotate(6deg);
   height: 90%;
 }
 
-.image-8:nth-of-type(4) {
+.image-4.imageSequence-8 {
   opacity: 1;
   transform: translate(-50%, -50%) rotate(6deg);
   height: 90%;
 }
 
-.image-9:nth-of-type(5) {
+.image-5.imageSequence-9 {
   opacity: 1;
   filter: brightness(2000) grayscale(200%) contrast(500%) saturate(400)
     drop-shadow(16px 16px 20px blue);
@@ -94,7 +97,7 @@ header {
   top: 70%;
 }
 
-.image-10:nth-of-type(5) {
+.image-5.imageSequence-10 {
   opacity: 1;
   transform: translate(-50%, -50%) rotate(190deg);
   left: 40%;

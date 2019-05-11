@@ -15,7 +15,8 @@
   position: absolute;
   border: 5px solid#f73859;
   padding: 20px 30px;
-  font-size: 40px;
+  font-size: 160px;
   background: #f6f1f1;
   box-shadow: 0 8px 6px -6px black;
+  bottom: 100px;
 }

@@ -28,6 +28,8 @@ const tinyLinks = [
   }
 ];
 
+const images = [image_1, image_2, image_3, image_4, image_5];
+
 class Header extends Component {
   state = { activeLink: null, counter: 0 };
 
@@ -49,23 +51,10 @@ class Header extends Component {
 
     return (
       <header>
-        <div
-          style={{
-            padding: `1rem`
-          }}
-        >
-          <h1 style={{ margin: 0 }}>
-            <Link
-              to="/"
-              style={{
-                fontSize: `0.75rem`
-              }}
-            >
-              {siteTitle}
-            </Link>
-          </h1>
-        </div>
-        <div className="linkContainer">
+        <h1 className="title">
+          <Link to="/">{siteTitle}</Link>
+        </h1>
+        <div className="tinyLinkContainer">
           {tinyLinks.map(tiny => (
             <TinyLink
               key={tiny.id}
@@ -78,11 +67,13 @@ class Header extends Component {
           ))}
         </div>
         {activeLink && <GiantLink activeLink={activeLink} />}
-        <img src={image_1} className={`image image-${counter}`} />
-        <img src={image_2} className={`image image-${counter}`} />
-        <img src={image_3} className={`image image-${counter}`} />
-        <img src={image_4} className={`image image-${counter}`} />
-        <img src={image_5} className={`image image-${counter}`} />
+        {images.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            className={`image image-${index + 1} imageSequence-${counter}`}
+          />
+        ))}
       </header>
     );
   }

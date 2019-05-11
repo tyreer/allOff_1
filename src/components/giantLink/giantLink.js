@@ -6,29 +6,14 @@ const getRandomInt = (min, max) =>
   Math.floor(Math.random() * (max - min) + min);
 
 const GiantLink = ({ activeLink }) => {
-  const letters = activeLink.text.split("");
+  const labels = [];
+  let count = 0;
+  let limit = getRandomInt(1, 3);
 
-  let yValue;
-
-  switch (activeLink.id) {
-    case 1:
-      yValue = "translateY(50vh)";
-      break;
-    case 2:
-      yValue = "translateY(-50vh)";
-      break;
-    case 3:
-      yValue = "translateY(50vh)";
-      break;
+  while (count < limit) {
+    labels.push("x");
+    count++;
   }
-
-  const trailLength = getRandomInt(1, 3);
-
-  const trail = useTrail(trailLength, {
-    config: config.stiff,
-    from: { transform: `${yValue} translateX(-50%)` },
-    transform: "translateY(0) translateX(-50%)"
-  });
 
   let crazyStyles;
 
@@ -54,24 +39,15 @@ const GiantLink = ({ activeLink }) => {
 
   return (
     <>
-      {trail.map((trailAnimation, index) => (
+      {labels.map(() => (
         <div
           style={{
             ...crazyStyles,
-            transform: `rotate(${getRandomInt(-60, 60)}deg)`
+            transform: `rotate(${getRandomInt(-70, 70)}deg)`
           }}
           className="outer"
         >
-          <animated.div
-            key={index}
-            style={{
-              ...trailAnimation,
-              bottom: `${index * 25}px`
-            }}
-            className="letterContainer"
-          >
-            {activeLink.text}
-          </animated.div>
+          <div className="letterContainer">{activeLink.text}</div>
         </div>
       ))}
     </>
