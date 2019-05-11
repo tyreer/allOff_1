@@ -1,43 +1,17 @@
-.root {
+.labelOuterContainer {
   position: absolute;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  border-top: 100vh solid #404b69;
-  border-bottom: 100vh solid #f73859;
-  width: 800px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  font-size: 120px;
+  z-index: 1;
 }
 
-.letter {
-  padding: 100px 0;
-}
-
-.bg {
+.labelInnerContainer {
+  text-transform: uppercase;
+  line-height: 0.8;
   position: absolute;
-  width: 200vw;
-  height: 200vh;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  will-change: transform;
-  background-color: #dbedf3;
-}
-
-.bg-1 {
-  background: url("../../images/granite-wood.png");
-  transform: translate(-50%, -50%) rotate(-5deg);
-}
-
-.bg-2 {
-  background: url("../../images/backpack.png");
-  transform: translate(-50%, -50%) rotate(10deg);
-}
-
-.bg-3 {
-  background: url("../../images/white-light-no-logo.png");
-  transform: translate(-50%, -50%) rotate(40deg);
+  border: 5px solid#f73859;
+  padding: 20px 30px;
+  font-size: 160px;
+  background: #f6f1f1;
+  box-shadow: 0 8px 6px -6px black;
+  bottom: 100px;
 }
