@@ -2,15 +2,15 @@ import React from "react";
 import { Link } from "gatsby";
 import "./tinyLinks.css";
 
-const TinyLink = ({ setActive, incrementCounter, link, text, to }) => {
+const TinyLink = ({ setActiveLink, counter, setCounter, link, text, to }) => {
   const handleMouseOver = () => {
-    setActive(link);
-    incrementCounter();
+    setActiveLink(link);
+    setCounter(counter === 10 ? 1 : counter + 1);
   };
 
   const handleMouseOut = () => {
-    setActive(null);
-    incrementCounter();
+    setActiveLink(null);
+    setCounter(counter === 10 ? 1 : counter + 1);
   };
 
   return (

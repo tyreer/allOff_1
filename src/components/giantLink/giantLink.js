@@ -34,6 +34,8 @@ const GiantLink = ({ activeLink }) => {
         left: ` ${getRandomInt(65, 75)}%`
       };
       break;
+    default:
+      return;
   }
 
   return (
